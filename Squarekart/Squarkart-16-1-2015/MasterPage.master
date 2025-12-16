@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="CSS/sparkstyle.css" rel="stylesheet" type="text/css" />
+      <link href="style/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+    </asp:ToolkitScriptManager>
+    <div>
+        <div style="height: 100px; background-color: #ffffff;">
+            <div class="wrapper">
+            <br /> <div style="float:left; width:170px; "><img src="img/sfblogo.png" alt="Squarekart" /></div> 
+           <h1 style="color:#01753d;  position:relative;  display:inline-block; width:370px; left:-70px; "> <asp:Label ID="lbldash" runat="server" Text=""></asp:Label></h1>
+            <br />
+            <div style="float:right;  margin-top:-40px; color:#000;">Welcome <asp:Label ID="lblUserid" runat="server" Text=""></asp:Label></div>
+            </div>
+        </div>
+        <div style="height: 5px; background-color: #354221;">
+        </div>
+
+             <div style="background:url(img/grd_nav.png) ; ">
+                   <div class="wrapper">
+                 
+                 <div id="nav">
+                     <ul>
+                         <li><a href="Dashboard.aspx">Dashboard</a></li>
+                         <li><a href="customer_profile.aspx">New Customer</a></li>
+                         <li>
+                             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Agent_mapping.aspx" Enabled="false" >Agent Mapping</asp:HyperLink>
+                         </li>
+                         <li>
+                             <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" >Logout</asp:LinkButton></li>
+                     </ul>
+                 </div>
+             </div></div>
+        <div>
+         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+       
+        </asp:ContentPlaceHolder>
+            <asp:UpdatePanel runat="server" UpdateMode="Always">
+                <ContentTemplate>
+                
+                     <asp:LinkButton Style="display: none" ID="_modalLinkButton" runat="server"></asp:LinkButton>
+                    <asp:ModalPopupExtender ID="ModalPopupExtender1" runat="server" TargetControlID="_modalLinkButton"
+                        PopupControlID="pnlAgents" BackgroundCssClass="modalBackground" DropShadow="true">
+                    </asp:ModalPopupExtender>
+                     <asp:Timer ID="Timer2" runat="server" Interval="5000" OnTick="chk">
+                    </asp:Timer>
+                    <asp:Panel ID="pnlAgents" runat="server" CssClass="pnlBackGround">
+                        <h4>
+                            Incoming call from
+                            <asp:Label ID="lblPop" runat="server" Text=""></asp:Label><br /><br /><center> <asp:Label ID="lblpop1" runat="server" Text=""/></center></h4>
+                        <br />
+                        <asp:Label ID="lblid" runat="server" Text="" Visible="false"></asp:Label>
+                        <asp:HiddenField ID="hfUid" runat="server" />
+                        <img src="img/incoming.png" height="60px" />
+                        <br />
+                        <center>
+                            <asp:Button ID="btnDone" runat="server" Text="Accept" BackColor="YellowGreen" CssClass="button_green" OnClick="btnDone_Click" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:Button ID="btnCancel" runat="server" Text="I Am Busy" CssClass="button_red"
+                                BackColor="Red" OnClick="btnCancel_Click" /></center>
+                    </asp:Panel>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+            
+        </div>
+      
+         <div class="footerdiv" >
+        Developed by Pratikshat Solutions
+        
+    </div>
+    </form>
+</body>
+</html>

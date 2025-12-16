@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>AB Motors</title>
+    <link href="CSS/StyleSheet.css" rel="stylesheet" />
+    <style>
+        a:link {
+    color: #000000;
+}
+       .a
+        { background-color:#3A7BB9;
+          color:#000000;
+      }
+        a:visited {font-family:Arial; color:#000000; text-decoration:none}
+a:hover {
+    color:#585858;
+}
+</style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+          <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+    </asp:ToolkitScriptManager>
+    <div>
+         <div class="wrapper" style="height:150px;">
+
+          <!--  <br /> <div style="float:left; width:100% "><img src="~/Images/bhagatgroupheader28.png"  /></div> -->
+         </div>
+            <br />
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+          <div class="footerdiv" >
+             Developed by <a href="http://www.pratikshat.com" target="_blank">Pratikshat Solutions</a>
+             </div>
+    </form>
+</body>
+</html>

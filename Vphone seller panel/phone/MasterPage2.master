@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+     <link href="css/constyle.css" rel="stylesheet" type="text/css" />
+    <link href="css/vStyle.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+     <div style=" float:left ">
+        <asp:Image ID="Image1" runat="server" Height="100px" Width="175px" ImageUrl="~/images/vlogo.png"  />
+    </div>
+    <div><center>
+    <table>
+        
+    </table>
+    </center></div>
+   <div style=" float:right; margin-right:20px">
+    <table>
+    <tr>
+            <td>
+             <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+            </td>
+    </tr>
+    <tr>
+      <td>
+         
+      </td>
+        </tr>
+    </table>
+    </div ><center>
+       <div  style=" margin-top:100px; height:100%; ">
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+         </div>
+    </center>
+    <center>
+     <div style="height:20px; color:#ffffff; width:100%;  position:fixed; bottom:0px;left:0;background:#0B0B61;"><%--style="height:22px; color:#000000; width:100%;  position:fixed; bottom:0px;left:0;background:#A4A4A4;"--%>
+           @2014 Developed and Designed by Pratikshat Solutions
+    </div>
+    </center>
+   
+    </form>
+</body>
+</html>

@@ -1,0 +1,437 @@
+﻿
+body 
+{
+   
+    font-size: .80em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+}
+
+}
+h1
+{
+    font-size:250%;
+    font-variant:small-caps;
+}
+h2
+{
+     font-size:200%;
+}
+h3
+{
+     font-size:120%;
+       color:#FF0204;
+       font-variant:small-caps;
+       text-shadow: 0 -1px 0 #000;
+        font-weight:500;
+}
+h4
+{
+   font-size:120%; 
+    font-weight:600;
+}
+image
+{
+     border:0px;
+}
+.topmenu
+{
+    
+}
+.wrapper
+{
+    width:1024px;
+    margin:0px auto;
+}
+.header
+{
+    background-color:#fff;
+    height:350px;
+    width:100%;
+     /*padding-top:50px;*/
+}
+.logo
+{
+    height:320px; width:430px; padding:10px;  text-align:center;
+}
+.headimg
+{
+     float:right;
+}
+.btnTry
+{
+     background: url(../img/btnTry.png) no-repeat;
+     width:200px;
+     height:40px;
+      border:0px;
+
+}
+ .tophead
+    {
+         text-align:left; 
+         background-color:#2B2B24;
+         height:50px;
+          /*position:fixed;
+           width:100%;*/
+    }
+    .nav
+    {
+         position:relative; 
+        
+          height:50px;
+          width:750px;display:inline-block;
+    }
+    .nav ul 
+    {
+        
+  text-align: left;
+  display: inline;
+  padding: 5px 4px 10px 0;
+  list-style: none;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  
+}
+.nav ul li {
+  font: bold 14px/18px sans-serif;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 12px 30px;
+  cursor: pointer;
+
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.nav ul li:hover {
+  background: #FF0204;
+  color: #fff;
+}
+.nav li a:hover
+{
+    color:#fff;
+}
+.nav li a
+{
+    text-decoration:none;
+    color:#fff;
+}
+
+ .nav ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 120px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+.nav ul li ul li { 
+  background: #555; 
+  display: block; 
+  color: #fff;
+  text-shadow: 0 -1px 0 #000;
+}
+.nav ul li ul li:hover { background: #666; }
+.nav ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.btnSignup
+{
+    background: url(../img/signup.png) no-repeat;
+     width:100px;
+     height:40px;
+       border:0px;
+}
+.btnSignin
+{
+    background: url(../img/signin.png) no-repeat;
+     width:100px;
+     height:40px;
+       border:0px;
+}
+.social
+{
+    background-color:#2B2B24; min-height:400px;text-align:center; 
+}
+.social li
+{
+     display:inline; padding:30px;
+}
+
+.txt
+{
+    width: 500px; min-height:22px; border-radius:2px;
+}
+
+/*Modal Popup*/
+.modalBackground 
+{
+    
+	background-color:#000;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+}
+
+.modalPopup 
+{
+	background-color:#fff;
+	border-width:3px;
+	border-style:solid;
+	border-color:#888;
+	border-radius:10px;
+	padding:5px;
+
+}
+
+.modalPopup p {
+    padding: 5px;
+}
+
+.sampleStyleA {
+	background-color:#FFF;
+}
+
+.sampleStyleB {
+	background-color:#FFF;
+	font-family:monospace;
+	font-size:10pt;
+	font-weight:bold;
+}
+
+.sampleStyleC {
+	background-color:#ddffdd;
+	font-family:sans-serif;
+	font-size:10pt;
+	font-style:italic;
+}
+
+.sampleStyleD {
+	background-color:Blue;
+	color:White;
+	font-family:Arial;
+	font-size:10pt;
+}
+
+/*Popup Control*/
+.popupControl{
+	background-color:White;
+	position:absolute;
+	visibility:hidden;
+}
+
+
+#enquiry input[type='text'], textarea
+{
+
+width: 300px;
+height: 22px;
+border-radius: 3px;
+border: 1px solid #CCC;
+padding: 5px;
+font-weight: 200;
+font-size: 15px;
+font-family: Verdana;
+box-shadow: 1px 1px 5px #CCC;
+ margin-bottom:10px;
+
+}
+
+#btnClose
+{
+      height:30px; 
+      width:30px; 
+      background:url(../img/ico-close-button.png); 
+      float:right; 
+      top:-20px; 
+      position:relative;
+       border:none;
+       right:-20px;
+        cursor:pointer;
+}
+
+.city-button
+{
+   width:200px;
+   height:35px;
+   background-color:#000;
+     color:#fff;
+
+      border-radius:5px;
+      box-shadow: -2px 2px 5px 1px #888;
+}
+.tname
+{
+    color:#222; text-align:left; border-radius: 5px;
+}
+.txtbox
+{
+    border-color:#c8c8c8; text-align:left; border-radius: 5px; border-width:.11em; padding-left:5px; color:#444;
+}
+img
+{
+    border:none;
+}
+*:focus
+{
+    outline: none;
+}
+legend,h2
+{
+     font-weight:700;
+     font-size:1.3em;
+      line-height:160%;
+       color:#0681C3; padding: 0px 10px 0px 10px; background-color:#fff;
+}
+.button
+{
+     background:#44BA13;
+     color:#fff;
+     line-height:160%;
+     border-radius:6px;
+     font-weight:bold;
+}
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+     border-radius:6px; line-height:20px;
+}
+
+input.passwordEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc; border-radius:6px;line-height:20px;
+}
+
+div.accountInfo
+{
+    width: 72%;
+}
+
+.blue-button
+{
+    background:url(../img/menubak-last.jpg); border:none;
+    border-radius:6px; line-height:28px; color:#fff; font-size:1.1em; font-style:oblique;
+}
+.green-button
+{
+    background:url(../img/menubak.jpg); border:none;
+    border-radius:6px; line-height:28px; color:#fff; font-size:1.1em; font-style:oblique;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+
+.genconf
+{
+    border-radius:6px;
+    box-shadow: 1px 1px 10px 2px #888;
+   padding:20px; border-color:#888;
+}
+
+
